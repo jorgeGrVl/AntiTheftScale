@@ -1,0 +1,189 @@
+/* Configuración del contenedor principal */
+body {
+    display: flex;
+    height: 100vh;
+    background-color: #f5f5f5;
+    margin: 0;
+}
+
+.left-wrapper {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100vh;
+}
+
+.left-container {
+    box-sizing: border-box;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-wrapper {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100vh;
+}
+
+.right-container {
+    box-sizing: border-box;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    height: 50%;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Título principal */
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Tarjeta de estado del paquete */
+.status-card {
+    height: 60vh;
+    width: 50vh;
+    background-color: #f0f8ff;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.status-card img {
+    height: 50vh;
+    margin-bottom: 10px;
+}
+
+.button-container {
+    display: flex;
+    gap: 10px; /* Espacio entre botones */
+    align-items: center;
+}
+
+/* Estilo para contenedor de botones y párrafos */
+.button-container {
+    display: flex;
+    gap: 20px; /* Espacio entre los botones */
+}
+
+.button-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
+}
+
+button {
+    background-color: #ff5722;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #e64a19;
+}
+
+/* Estado de la alarma y otros estados */
+#toggleAlarmStatus, #resetPackageStatus {
+    color: #333;
+    font-size: 14px;
+    margin-top: 5px; /* Espacio entre el botón y el estado */
+}
+
+#alarmState, #packageState {
+    font-weight: bold;
+}
+
+
+button:hover {
+    background-color: #e64a19;
+}
+
+/* Estado de la alarma */
+#alarmStatus {
+    color: #333;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+#alarmState {
+    font-weight: bold;
+}
+
+/* Gráfica */
+canvas {
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#webcam-container {
+    width: 100%;
+    max-width: 500px; /* Ajusta el tamaño según el diseño */
+    aspect-ratio: 16 / 9; /* Proporción de 16:9 para video */
+    position: relative;
+    overflow: hidden;
+    background-color: #222; /* Fondo oscuro para cuando está "Sin señal" */
+    border-radius: 8px;
+}
+
+#webcam {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que el video llene el contenedor */
+    display: none; /* Oculta el video por defecto */
+    border-radius: 8px;
+}
+
+#no-signal {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.5em;
+    background-color: #222; /* Mismo color que el fondo */
+    border-radius: 8px;
+}
+
+        /* Estilo para el botón de alternar cámara */
+        #toggleWebcamBtn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            background-color: #e64a19;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        #toggleWebcamBtn:hover {
+            background-color: #e64a19;
+        }

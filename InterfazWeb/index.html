@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interfaz de Paquete y Alarma</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="left-wrapper">
+        <div class="left-container">
+            <h1>Estado del Paquete</h1>
+            <div class="status-card">
+                <img id="packageImage" src="img/cargando.gif" alt="Estado del Paquete">
+                <h2 id="packageStatus">Cargando...</h2>
+            </div>
+            <div class="button-container">
+                <div class="button-wrapper">
+                    <button id="toggleAlarmBtn" onclick="toggleAlarm()">Encender</button>
+                    <p id="toggleAlarmStatus">Alarma: <span id="alarmState">Apagada</span></p>
+                </div>
+                
+                <div class="button-wrapper">
+                    <button id="resetPackageBtn" onclick="resetPackageStatus()">Resetear</button>
+                    <p id="resetPackageStatus">Nuevo Paquete</p>
+                </div>
+            </div>                  
+        </div>
+    </div>
+    <div class="right-wrapper">
+        <div class="right-container">
+            <h2>Cámara en Tiempo Real</h2>
+            <div id="webcam-container">
+                <video id="webcam" autoplay></video>
+                <div id="no-signal">Sin señal</div>
+            </div>
+        </div>
+        <div class="right-container">
+            <!-- Gráfica de peso en tiempo real -->
+            <h2>Peso en Tiempo Real</h2>
+            <canvas id="weightChart" width="400" height="150"></canvas>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
